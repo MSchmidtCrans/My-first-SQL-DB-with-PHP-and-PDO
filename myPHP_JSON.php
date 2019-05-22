@@ -19,20 +19,25 @@ try {
     $itemsquery->execute();
 
     //Set array
-    $persons = array();
+    $person = array();
+    $person = array();
     
     //Loop through all rows from table
     foreach($itemsquery as $item) {
         //echo($item['firstname'].' '.$item['lastname'].' '.$item['gender'].' '.$item['city'].'</br>');    
 
-    //Add value to array
-    $persons['id'] = $item['id'];
-    $persons['firstName'] = $item['firstname']; 
-    $persons['lastName'] = $item['lastname'];
-    $persons['gender'] = $item['gender'];
-    $persons['city'] = $item['city'];
-    }
+    //Add values to person array
+    $person['id'] = $item['id'];
+    $person['firstName'] = $item['firstname']; 
+    $person['lastName'] = $item['lastname'];
+    $person['gender'] = $item['gender'];
+    $person['city'] = $item['city'];
 
+    //Add person array to persons array (2-dimensional)
+    $x = $person[id] - 1;
+    $persons[$x] = $person;
+    }
+    
     //Sent array as JSON
     echo json_encode($persons);
 
