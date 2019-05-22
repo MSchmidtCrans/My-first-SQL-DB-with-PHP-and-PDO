@@ -13,31 +13,23 @@ try {
 
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
+
     //Prepare and execute mysql query
-    $itemsquery = $conn->prepare("SELECT * FROM adressCards");
-    $itemsquery->execute();
+    $adressquery = $conn->prepare("SELECT * FROM adressCards");
+    $adressquery->execute();
 
     //Set array
-    $person = array();
-    $person = array();
+    //$person = array();
+    $persons = array();
     
     //Loop through all rows from table
-    foreach($itemsquery as $item) {
-        //echo($item['firstname'].' '.$item['lastname'].' '.$item['gender'].' '.$item['city'].'</br>');    
-
-    //Add values to person array
-    $person['id'] = $item['id'];
-    $person['firstName'] = $item['firstname']; 
-    $person['lastName'] = $item['lastname'];
-    $person['gender'] = $item['gender'];
-    $person['city'] = $item['city'];
+    foreach($adressquery as $item) {   
 
     //Add person array to persons array (2-dimensional)
-    $x = $person[id] - 1;
-    $persons[$x] = $person;
+    $x = $item[id] - 1;
+    $persons[$x] = $item;
     }
-    
+
     //Sent array as JSON
     echo json_encode($persons);
 
