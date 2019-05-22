@@ -13,7 +13,8 @@ try {
     $itemsquery->execute();
 
     foreach($itemsquery as $item) {
-        echo($item['firstname'].' '.$item['lastname'].' '.$item['gender'].' '.$item['city'].'</br>');
+        echo($item['firstname'].' '.$item['lastname'].' '.$item['gender'].' '.$item['city'].'</br>');    
+        echo $result;
     }
 
 
