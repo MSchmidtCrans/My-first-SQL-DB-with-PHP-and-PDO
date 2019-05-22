@@ -17,14 +17,14 @@ A repo to show my practice with mySQL, PHP and PDO.
 
 
     Enable JSON package on database records
-1. Create an array to collect rows 
+1. Create an array to collect rows -DONE-
 
-2. Insert simple data into array 
+2. Insert simple data into array -DONE-
 
-3. Insert complete row into two dimensional array
+3. Insert complete row into two dimensional array -DONE-
 
-4. Create json package to sent
+4. Create json package to sent -DONE-
 
-5. Display json 
+5. Display json -DONE-
 
-6. End of practice
+6. End of practice -DONE-
