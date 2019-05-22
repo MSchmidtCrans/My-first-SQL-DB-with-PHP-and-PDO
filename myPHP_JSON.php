@@ -23,9 +23,14 @@ try {
     
     //Loop through all rows from table
     foreach($itemsquery as $item) {
-        echo($item['firstname'].' '.$item['lastname'].' '.$item['gender'].' '.$item['city'].'</br>');    
+        //echo($item['firstname'].' '.$item['lastname'].' '.$item['gender'].' '.$item['city'].'</br>');    
 
-    //Add value to array    
+    //Add value to array
+    $persons['id'] = $item['id'];
+    $persons['firstName'] = $item['firstname']; 
+    $persons['lastName'] = $item['lastname'];
+    $persons['gender'] = $item['gender'];
+    $persons['city'] = $item['city'];
     }
 
     //Sent array as JSON
